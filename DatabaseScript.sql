@@ -7,5 +7,5 @@ CREATE TABLE `usuario` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-INSERT INTO usuario (`id`, `empresa`, `empresa_id`, `nome`, `senha`) VALUES (1, 'Empresa Teste', 1, 'admin', '$2a$10$ophOvFxBTwhbHsJ51OANTuP2VZRsHrtjR3rbpvXxlYEk7/rNx2M2q');
+INSERT INTO usuario (`id`, `empresa`, `empresa_id`, `nome`, `senha`) VALUES (1, 'SPTrans', 1, 'admin', '$2a$10$ophOvFxBTwhbHsJ51OANTuP2VZRsHrtjR3rbpvXxlYEk7/rNx2M2q');
 
