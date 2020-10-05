@@ -14,7 +14,7 @@ public class VeiculoDTO {
 
     Long empresaId;
 
-    Long codEquipamento;
+    String codEquipamento;
 
     String numeroLinha;
 
@@ -79,11 +79,11 @@ public class VeiculoDTO {
         this.empresaId = empresaId;
     }
 
-    public Long getCodEquipamento() {
+    public String getCodEquipamento() {
         return codEquipamento;
     }
 
-    public void setCodEquipamento(Long codEquipamento) {
+    public void setCodEquipamento(String codEquipamento) {
         this.codEquipamento = codEquipamento;
     }
 

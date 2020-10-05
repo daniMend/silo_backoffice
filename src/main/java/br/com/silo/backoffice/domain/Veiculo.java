@@ -23,7 +23,7 @@ public class Veiculo {
         Long empresaId;
 
         @Column
-        Long codEquipamento;
+        String codEquipamento;
 
         @Column
         String numeroLinha;
@@ -79,11 +79,11 @@ public class Veiculo {
         this.empresaId = empresaId;
     }
 
-    public Long getCodEquipamento() {
+    public String getCodEquipamento() {
         return codEquipamento;
     }
 
-    public void setCodEquipamento(Long codEquipamento) {
+    public void setCodEquipamento(String codEquipamento) {
         this.codEquipamento = codEquipamento;
     }
 
