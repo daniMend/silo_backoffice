@@ -45,7 +45,6 @@ public class EquipamentoService {
         equipamento.setId(equipamentoDTO.getId());
         equipamento.setCodEquipamento(equipamentoDTO.getCodEquipamento());
         equipamento.setEmpresa(equipamentoDTO.getEmpresa());
-        equipamento.setEmpresaId(equipamentoDTO.getEmpresaId());
         equipamento.setDescricaoEquipamento(equipamentoDTO.getDescricaoEquipamento());
         equipamento.setStatusEquipamento(equipamentoDTO.getStatusEquipamento());
 
@@ -71,7 +70,6 @@ public class EquipamentoService {
 
         equipamento.setCodEquipamento(equipamentoDTO.getCodEquipamento());
         equipamento.setEmpresa(equipamentoDTO.getEmpresa());
-        equipamento.setEmpresaId(equipamentoDTO.getEmpresaId());
         equipamento.setDescricaoEquipamento(equipamentoDTO.getDescricaoEquipamento());
         equipamento.setStatusEquipamento(equipamentoDTO.getStatusEquipamento());
 

@@ -1,9 +1,11 @@
 package br.com.silo.backoffice.domain.dto;
 
+import br.com.silo.backoffice.domain.Empresa;
 import br.com.silo.backoffice.domain.Usuario;
 
 public class UsuarioDTO {
 
+    //private static Empresa empresa;
     Long id;
 
     String nome;
@@ -12,14 +14,14 @@ public class UsuarioDTO {
 
     String token = "";
 
-    String empresa;
+    Empresa empresa;
 
-    Long empresaId;
+    //Empresa empresa;
+
 
     public static UsuarioDTO converter(Usuario usuario) {
         UsuarioDTO usuarioDTO = new UsuarioDTO();
         usuarioDTO.setEmpresa(usuario.getEmpresa());
-        usuarioDTO.setEmpresaId(usuario.getEmpresaId());
         usuarioDTO.setId(usuario.getId());
         usuarioDTO.setNome(usuario.getNome());
         usuarioDTO.setToken(usuario.getToken());
@@ -58,19 +60,7 @@ public class UsuarioDTO {
         this.token = token;
     }
 
-    public String getEmpresa() {
-        return empresa;
-    }
+    public Empresa getEmpresa() {return empresa;}
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
-    }
-
-    public Long getEmpresaId() {
-        return empresaId;
-    }
-
-    public void setEmpresaId(Long empresaId) {
-        this.empresaId = empresaId;
-    }
+    public void setEmpresa(Empresa empresa) {this.empresa = empresa;}
 }

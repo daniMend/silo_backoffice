@@ -51,7 +51,6 @@ public class UserService {
         usuario.setSenha(encoder.encode(userDTO.getSenha()));
 
         usuario.setEmpresa(userDTO.getEmpresa());
-        usuario.setEmpresaId(userDTO.getEmpresaId());
 
         usuarioDAO.save(usuario);
     }
@@ -79,7 +78,6 @@ public class UserService {
         }
 
         usuario.setEmpresa(userDTO.getEmpresa());
-        usuario.setEmpresaId(userDTO.getEmpresaId());
 
         usuarioDAO.save(usuario);
     }

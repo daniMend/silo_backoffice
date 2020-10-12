@@ -1,5 +1,6 @@
 package br.com.silo.backoffice.domain.dto;
 
+import br.com.silo.backoffice.domain.Empresa;
 import br.com.silo.backoffice.domain.Veiculo;
 
 public class VeiculoDTO {
@@ -10,9 +11,7 @@ public class VeiculoDTO {
 
     String placaVeiculo;
 
-    String empresa;
-
-    Long empresaId;
+    Empresa empresa;
 
     String codEquipamento;
 
@@ -29,7 +28,6 @@ public class VeiculoDTO {
         veiculoDTO.setModeloVeiculo(veiculo.getModeloVeiculo());
         veiculoDTO.setPlacaVeiculo(veiculo.getPlacaVeiculo());
         veiculoDTO.setEmpresa(veiculo.getEmpresa());
-        veiculoDTO.setEmpresaId(veiculo.getEmpresaId());
         veiculoDTO.setId(veiculo.getId());
         veiculoDTO.setCodEquipamento(veiculo.getCodEquipamento());
         veiculoDTO.setNumeroLinha(veiculo.getNumeroLinha());
@@ -63,20 +61,12 @@ public class VeiculoDTO {
         this.placaVeiculo = placaVeiculo;
     }
 
-    public String getEmpresa() {
+    public Empresa getEmpresa() {
         return empresa;
     }
 
-    public void setEmpresa(String empresa) {
+    public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
-    }
-
-    public Long getEmpresaId() {
-        return empresaId;
-    }
-
-    public void setEmpresaId(Long empresaId) {
-        this.empresaId = empresaId;
     }
 
     public String getCodEquipamento() {

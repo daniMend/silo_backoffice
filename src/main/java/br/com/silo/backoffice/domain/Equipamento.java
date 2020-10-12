@@ -19,11 +19,9 @@ public class Equipamento {
     @Column(nullable = false)
     String statusEquipamento;
 
-    @Column
-    String empresa;
-
-    @Column
-    Long empresaId;
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    Empresa empresa;
 
     public Long getId() {
         return id;
@@ -57,19 +55,11 @@ public class Equipamento {
         this.statusEquipamento = statusEquipamento;
     }
 
-    public String getEmpresa() {
+    public Empresa getEmpresa() {
         return empresa;
     }
 
-    public void setEmpresa(String empresa) {
+    public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
-    }
-
-    public Long getEmpresaId() {
-        return empresaId;
-    }
-
-    public void setEmpresaId(Long empresaId) {
-        this.empresaId = empresaId;
     }
     }

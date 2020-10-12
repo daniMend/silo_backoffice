@@ -1,5 +1,7 @@
 package br.com.silo.backoffice.security;
 
+import br.com.silo.backoffice.domain.Empresa;
+
 import java.io.Serializable;
 
 public class JwtResponse implements Serializable {
@@ -13,14 +15,14 @@ public class JwtResponse implements Serializable {
 
     private String nome;
 
-    private long empresaId;
+    private Empresa empresa;
 
-    public JwtResponse(String jwttoken, long expireAt, long id, String nome, long empresaId) {
+    public JwtResponse(String jwttoken, long expireAt, long id, String nome, Empresa empresa) {
         this.jwttoken = jwttoken;
         this.expireAt = expireAt;
         this.id = id;
         this.nome = nome;
-        this.empresaId = empresaId;
+        this.empresa = empresa;
     }
 
     public String getToken() {
@@ -43,5 +45,5 @@ public class JwtResponse implements Serializable {
         return this.nome;
     }
 
-    public long getEmpresaId() { return this.empresaId; }
+    public Empresa getEmpresa() { return this.empresa; }
 }

@@ -13,6 +13,6 @@ public interface EquipamentoDAO extends PagingAndSortingRepository<Equipamento, 
     @Query("SELECT e FROM Equipamento e WHERE e.cod_equipamento = ?1")
     Equipamento findByUsername(String codEquipamento);
 
-    @Query(nativeQuery = true, value = "SELECT * FROM equipamento WHERE cod_equipamento LIKE concat('%', ?1,'%')")
+    @Query(nativeQuery = true, value = "SELECT * FROM equipamento eq JOIN empresa e ON eq.empresa_id=e.id WHERE cod_equipamento LIKE concat('%', ?1,'%')")
     Page<Equipamento> findPaged(String codEquipamento, Pageable pageable);
 }

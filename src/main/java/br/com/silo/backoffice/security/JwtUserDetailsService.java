@@ -30,14 +30,14 @@ public class JwtUserDetailsService implements UserDetailsService {
 
         List<GrantedAuthority> grantedAuthorityList = new ArrayList<>();
 
-        return new JwtUserDetails(user.getNome(), user.getSenha(), grantedAuthorityList, user.getId(), user.getEmpresaId());
+        return new JwtUserDetails(user.getNome(), user.getSenha(), grantedAuthorityList, user.getId(), user.getEmpresa());
     }
 
     public Usuario save(Usuario usuario) {
         Usuario newUser = new Usuario();
         newUser.setNome(usuario.getNome());
         newUser.setSenha(bcryptEncoder.encode(usuario.getSenha()));
-        newUser.setEmpresaId(usuario.getEmpresaId());
+        newUser.setEmpresa(usuario.getEmpresa());
         usuarioDAO.save(newUser);
         return newUser;
     }

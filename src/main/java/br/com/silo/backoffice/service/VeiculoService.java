@@ -45,7 +45,6 @@ public class VeiculoService {
         veiculo.setId(veiculoDTO.getId());
         veiculo.setPlacaVeiculo(veiculoDTO.getPlacaVeiculo());
         veiculo.setEmpresa(veiculoDTO.getEmpresa());
-        veiculo.setEmpresaId(veiculoDTO.getEmpresaId());
         veiculo.setModeloVeiculo(veiculoDTO.getModeloVeiculo());
         veiculo.setCodEquipamento(veiculoDTO.getCodEquipamento());
         veiculo.setNumeroLinha(veiculoDTO.getNumeroLinha());
@@ -75,7 +74,6 @@ public class VeiculoService {
 
         veiculo.setPlacaVeiculo(veiculoDTO.getPlacaVeiculo());
         veiculo.setEmpresa(veiculoDTO.getEmpresa());
-        veiculo.setEmpresaId(veiculoDTO.getEmpresaId());
         veiculo.setModeloVeiculo(veiculoDTO.getModeloVeiculo());
         veiculo.setCodEquipamento(veiculoDTO.getCodEquipamento());
         veiculo.setNumeroLinha(veiculoDTO.getNumeroLinha());

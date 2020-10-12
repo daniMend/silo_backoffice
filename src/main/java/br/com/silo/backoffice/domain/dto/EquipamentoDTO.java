@@ -1,5 +1,6 @@
 package br.com.silo.backoffice.domain.dto;
 
+import br.com.silo.backoffice.domain.Empresa;
 import br.com.silo.backoffice.domain.Equipamento;
 
 
@@ -13,7 +14,7 @@ public class EquipamentoDTO {
 
     String statusEquipamento;
 
-    String empresa;
+    Empresa empresa;
 
     Long empresaId;
 
@@ -24,7 +25,6 @@ public class EquipamentoDTO {
         equipamentoDTO.setDescricaoEquipamento(equipamento.getDescricaoEquipamento());
         equipamentoDTO.setStatusEquipamento(equipamento.getStatusEquipamento());
         equipamentoDTO.setEmpresa(equipamento.getEmpresa());
-        equipamentoDTO.setEmpresaId(equipamento.getEmpresaId());
         return equipamentoDTO;
     }
 
@@ -60,19 +60,11 @@ public class EquipamentoDTO {
         this.statusEquipamento = statusEquipamento;
     }
 
-    public String getEmpresa() {
+    public Empresa getEmpresa() {
         return empresa;
     }
 
-    public void setEmpresa(String empresa) {
+    public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
-    }
-
-    public Long getEmpresaId() {
-        return empresaId;
-    }
-
-    public void setEmpresaId(Long empresaId) {
-        this.empresaId = empresaId;
     }
     }

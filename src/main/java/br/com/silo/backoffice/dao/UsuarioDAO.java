@@ -14,8 +14,11 @@ public interface UsuarioDAO extends PagingAndSortingRepository<Usuario, Long> { 
     @Query("SELECT u FROM Usuario u WHERE u.nome = ?1")
     Usuario findByUsername(String nome);
 
-    @Query(nativeQuery = true, value = "SELECT * FROM usuario WHERE nome LIKE concat('%', ?1,'%')")
+    @Query(nativeQuery = true, value = "SELECT u.id,u.nome,e.empresa_nome FROM usuario u JOIN empresa e ON u.empresa_id=e.id WHERE nome LIKE concat('%', ?1,'%');")
     Page<Usuario> findPaged(String nome, Pageable pageable);
+
+    //@Query(nativeQuery = true, value = "SELECT * FROM usuario WHERE nome LIKE concat('%', ?1,'%')")
+    //Page<Usuario> findPaged(String nome, Pageable pageable);
 
 //    @Query("SELECT u FROM usuario u WHERE lower(u.email) like lower(concat('%', ?1,'%'))")
 //    Page<Usuario> findByEmail(String email, Pageable pageable);

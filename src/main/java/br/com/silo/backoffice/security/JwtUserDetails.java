@@ -1,5 +1,6 @@
 package br.com.silo.backoffice.security;
 
+import br.com.silo.backoffice.domain.Empresa;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
@@ -7,12 +8,12 @@ import java.util.Collection;
 
 public class JwtUserDetails extends User {
     private long id;
-    private long empresaId;
+    private Empresa empresa;
 
-    public JwtUserDetails(String username, String password, Collection<? extends GrantedAuthority> authorities, long id, long empresaId) {
+    public JwtUserDetails(String username, String password, Collection<? extends GrantedAuthority> authorities, long id, Empresa empresa) {
         super(username, password, authorities);
         this.id = id;
-        this.empresaId = empresaId;
+        this.empresa = empresa;
     }
 
     public long getId() {
@@ -27,12 +28,12 @@ public class JwtUserDetails extends User {
         return super.getUsername() ;
     }
 
-    public long getEmpresaId() {
-        return empresaId;
+    public Empresa getEmpresa() {
+        return empresa;
     }
 
-    public void setEmpresaId(long empresaId) {
-        this.empresaId = empresaId;
+    public void setEmpresaId(Empresa empresaId) {
+        this.empresa = empresaId;
     }
 
 }
