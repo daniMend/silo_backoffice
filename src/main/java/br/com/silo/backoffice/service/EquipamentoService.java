@@ -97,6 +97,11 @@ public class EquipamentoService {
             throw new NotFoundException();
         }
 
+        String status = equipamento.getStatusEquipamento();
+
+        if (status == "ATIVO") {
+            throw new BadRequestException("Não é possível excluir um equipamento ativo.");
+        }
         equipamentoDAO.delete(equipamento);
     }
 }

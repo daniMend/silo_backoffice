@@ -26,8 +26,8 @@ public class Veiculo {
     @JoinColumn(nullable = false)
     Empresa empresa;
 
-    @OneToOne
-    @JoinColumn(nullable = true)
+    @OneToOne(optional = true)
+    @JoinColumn
     Equipamento equipamento;
 
     @Column
