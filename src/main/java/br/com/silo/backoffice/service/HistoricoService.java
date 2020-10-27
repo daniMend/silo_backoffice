@@ -17,7 +17,7 @@ public class HistoricoService {
     @Autowired
     HistoricoDAO historicoDAO;
 
-    public Historico get(Date datahora) {
+    public Historico get(String datahora) {
         return historicoDAO.findByDate(datahora);
     }
 
@@ -29,7 +29,7 @@ public class HistoricoService {
         return historico;
     }
 
-    public Page<Historico> get(Date datahora, Integer pageSize, Integer page) {
+    public Page<Historico> get(String datahora, Integer pageSize, Integer page) {
         Pageable paging = PageRequest.of(page, pageSize);
 
         return historicoDAO.findPaged(datahora, paging);

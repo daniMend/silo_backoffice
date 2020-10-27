@@ -12,11 +12,9 @@ import java.util.Date;
 public class HistoricoDTO {
     Long id;
 
-    Equipamento equipamento;
-
     Veiculo veiculo;
 
-    Date datahora;
+    String datahora;
 
     Long qtdPassageiros;
 
@@ -25,7 +23,6 @@ public class HistoricoDTO {
     public static HistoricoDTO converter(Historico historico) {
         HistoricoDTO historicoDTO = new HistoricoDTO();
         historicoDTO.setId(historico.getId());
-        historicoDTO.setEquipamento(historico.getEquipamento());
         historicoDTO.setVeiculo(historico.getVeiculo());
         historicoDTO.setDatahora(historico.getDatahora());
         historicoDTO.setQtdPassageiros(historico.getQtdPassageiros());
@@ -41,14 +38,6 @@ public class HistoricoDTO {
         this.id = id;
     }
 
-    public Equipamento getEquipamento() {
-        return equipamento;
-    }
-
-    public void setEquipamento(Equipamento equipamento) {
-        this.equipamento = equipamento;
-    }
-
     public Veiculo getVeiculo() {
         return veiculo;
     }
@@ -57,11 +46,11 @@ public class HistoricoDTO {
         this.veiculo = veiculo;
     }
 
-    public Date getDatahora() {
+    public String getDatahora() {
         return datahora;
     }
 
-    public void setDatahora(Date datahora) {
+    public void setDatahora(String datahora) {
         this.datahora = datahora;
     }
 

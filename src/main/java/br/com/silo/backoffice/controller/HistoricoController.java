@@ -17,7 +17,7 @@ public class HistoricoController {
     HistoricoService historicoService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public Page<Historico> getHistorico(@RequestParam Date datahora, @RequestParam Integer pageSize, @RequestParam Integer page) {
+    public Page<Historico> getHistorico(@RequestParam String datahora, @RequestParam Integer pageSize, @RequestParam Integer page) {
         return historicoService.get(datahora, pageSize, page);
     }
 

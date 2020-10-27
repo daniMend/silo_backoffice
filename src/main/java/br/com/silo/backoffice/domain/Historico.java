@@ -14,14 +14,10 @@ public class Historico {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    Equipamento equipamento;
-
-    @ManyToOne
-    @JoinColumn(nullable = false)
     Veiculo veiculo;
 
     @Column(nullable = false)
-    Date datahora;
+    String datahora;
 
     @Column(nullable = false)
     Long qtdPassageiros;
@@ -37,15 +33,6 @@ public class Historico {
         this.id = id;
     }
 
-
-    public Equipamento getEquipamento() {
-        return equipamento;
-    }
-
-    public void setEquipamento(Equipamento equipamento) {
-        this.equipamento = equipamento;
-    }
-
     public Veiculo getVeiculo() {
         return veiculo;
     }
@@ -54,11 +41,11 @@ public class Historico {
         this.veiculo = veiculo;
     }
 
-    public Date getDatahora() {
+    public String getDatahora() {
         return datahora;
     }
 
-    public void setDatahora(Date datahora) {
+    public void setDatahora(String datahora) {
         this.datahora = datahora;
     }
 

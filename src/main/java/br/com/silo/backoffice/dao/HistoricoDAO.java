@@ -13,8 +13,8 @@ import java.util.Date;
 @Repository
 public interface HistoricoDAO extends PagingAndSortingRepository<Historico, Long> {
     @Query(nativeQuery = true, value = "SELECT h FROM historico h WHERE h.datahora = ?1")
-    Historico findByDate(Date datahora);
+    Historico findByDate(String datahora);
 
-    @Query(nativeQuery = true, value = "SELECT * FROM historico h JOIN veiculo v ON h.veiculo_id=v.id JOIN equipamento q ON  h.equipamento_id=q.id WHERE datahora LIKE concat('%', ?1,'%')")
-    Page<Historico> findPaged(Date datahora, Pageable pageable);
+    @Query(nativeQuery = true, value = "SELECT * FROM historico h JOIN veiculo v ON h.veiculo_id=v.id WHERE datahora LIKE concat('%', ?1,'%')")
+    Page<Historico> findPaged(String datahora, Pageable pageable);
 }
