@@ -105,12 +105,12 @@ public class VeiculoService {
 
 
         if ((newEqpto!=oldEqpto)&&(newEqpto!=null)&&(oldEqpto!=null)) {
-            updateEqptStatus(oldEqpto,"INATIVO ");
-            updateEqptStatus(newEqpto,"ATIVO ");
+            updateEqptStatus(oldEqpto,"INATIVO");
+            updateEqptStatus(newEqpto,"ATIVO");
         } if ((newEqpto!=null)&&(oldEqpto==null)){
-            updateEqptStatus(newEqpto,"ATIVO ");
+            updateEqptStatus(newEqpto,"ATIVO");
         } if ((newEqpto==null)&&(oldEqpto!=null)){
-            updateEqptStatus(oldEqpto,"INATIVO ");
+            updateEqptStatus(oldEqpto,"INATIVO");
         }
 
     }
